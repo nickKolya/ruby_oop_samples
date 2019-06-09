@@ -18,23 +18,3 @@ end
 
 student = Student.new('Alex', '#Pivorak Summer Course')
 # => ArgumentError (wrong number of arguments (given 2, expected 1))
-
-# ===========================================================
-
-class Human
-  def say_hello
-    p 'Hello from Human!'
-  end
-end
-
-class Student < Human
-  def say_hello(name)
-    super()
-
-    p "My name is #{name}"
-  end
-end
-
-Student.new.say_hello('Alex')
-# => "Hello from Human!"
-# => "My name is Alex"

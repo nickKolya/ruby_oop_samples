@@ -25,3 +25,24 @@ student.name
 
 student.study_place
 # => "#Pivorak Summer Course"
+
+
+# ===========================================================
+
+class Human
+  def say_hello
+    p 'Hello from Human!'
+  end
+end
+
+class Student < Human
+  def say_hello(name)
+    super()
+
+    p "My name is #{name}"
+  end
+end
+
+Student.new.say_hello('Alex')
+# => "Hello from Human!"
+# => "My name is Alex"
